@@ -21,7 +21,6 @@ BuildRequires:  postgresql-devel
 BuildRequires:  sqlite3-devel
 BuildRequires:	sqlite3-tools
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 App::Info provides a generalized interface for providing metadata
