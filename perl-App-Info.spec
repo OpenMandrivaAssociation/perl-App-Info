@@ -1,6 +1,6 @@
 %define module	App-Info
 %define name	perl-%{module}
-%define version 0.54
+%define version 0.55
 %define release %mkrel 1
 
 Name:		%{name}
