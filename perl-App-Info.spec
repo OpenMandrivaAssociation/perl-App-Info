@@ -1,5 +1,5 @@
 %define upstream_name	 App-Info
-%define upstream_version 0.56
+%define upstream_version 0.57
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,12 +9,8 @@ Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.bz2
-
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
-BuildRequires:  perl-Module-Build
+Source0:	http://www.cpan.org/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
+BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Test::Pod) >= 1.20
 BuildRequires:  apache
 BuildRequires:  postgresql-devel
@@ -50,6 +46,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changes README
+%doc Changes README.md
 %{perl_vendorlib}/App
 %{_mandir}/*/*
