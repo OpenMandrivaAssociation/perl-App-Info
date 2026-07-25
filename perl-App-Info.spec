@@ -2,14 +2,14 @@
 %define upstream_version 0.57
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    %{upstream_version}
+Release:    4
 
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/App-Info
+Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-%{upstream_version}.tar.gz
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Test::Pod) >= 1.20
 BuildRequires:  apache
