@@ -8,7 +8,7 @@ Release:    4
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/App-Info
+Url:		https://github.com/theory/app-info
 Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-%{upstream_version}.tar.gz
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Test::Pod) >= 1.20
