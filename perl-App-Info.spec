@@ -1,15 +1,13 @@
 %define upstream_name	 App-Info
-%define upstream_version 0.57
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    4
+Version:    0.57
+Release:    5
 
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/theory/app-info
-Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-%{version}.tar.gz
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Test::Pod) >= 1.20
 BuildRequires:  apache
@@ -27,7 +25,7 @@ order to determine whether software dependencies have been fulfilled,
 and to get necessary metadata about those software packages.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -62,9 +60,7 @@ rm -rf %{buildroot}
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.550.0-1mdv2010.0
 + Revision: 402976
-- rebuild using %%perl_convert_version
-
-* Sat Jul 19 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.55-1mdv2009.0
+- rebuild using %0.57 Sat Jul 19 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.55-1mdv2009.0
 + Revision: 238724
 - update to new version 0.55
 
