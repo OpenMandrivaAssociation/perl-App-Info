@@ -2,7 +2,7 @@
 %define upstream_version 0.57
 Name:       perl-%{upstream_name}
 Version:	0.57
-Release:	3
+Release:	4
 
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
@@ -10,13 +10,13 @@ Group:		Development/Perl
 Url:		https://github.com/theory/app-info
 Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-0.57.tar.gz
 BuildRequires:  perl(Module::Build)
+BuildRequires:	perl-devel
 BuildRequires:  perl(Test::Pod) >= 1.20
 BuildRequires:  apache
 BuildRequires:  postgresql-devel
 BuildRequires:  sqlite3-devel
 BuildRequires:	sqlite3-tools
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 App::Info provides a generalized interface for providing metadata
@@ -29,7 +29,7 @@ and to get necessary metadata about those software packages.
 %setup -q -n App-Info-0.57
 
 %build
-%{__perl} Build.PL installdirs=vendor
+perl Build.PL installdirs=vendor
 ./Build
 ./Build test || :
 
