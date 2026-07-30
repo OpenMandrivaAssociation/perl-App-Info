@@ -1,13 +1,14 @@
 %define upstream_name	 App-Info
+%define upstream_version 0.57
 Name:       perl-%{upstream_name}
-Version:    0.57
-Release:    5
+Version:	0.57
+Release:	1
 
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/theory/app-info
-Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-0.57.tar.gz
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Test::Pod) >= 1.20
 BuildRequires:  apache
