@@ -2,7 +2,7 @@
 %define upstream_version 0.57
 Name:       perl-%{upstream_name}
 Version:	0.57
-Release:	5
+Release:	6
 
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
