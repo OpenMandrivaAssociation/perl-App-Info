@@ -2,13 +2,14 @@
 %define upstream_version 0.57
 Name:       perl-%{upstream_name}
 Version:	0.57
-Release:	9
+Release:	10
 
 Summary:	Information about software packages on a system
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/theory/app-info
 Source0:	https://cpan.metacpan.org/authors/id/D/DW/DWHEELER/App-Info-0.57.tar.gz
+BuildRequires:	make
 BuildRequires:  perl(Module::Build)
 BuildRequires:	perl-devel
 BuildRequires:  perl(Test::Pod) >= 1.20
@@ -31,7 +32,6 @@ and to get necessary metadata about those software packages.
 %build
 perl Build.PL installdirs=vendor
 ./Build
-./Build test || :
 
 %check
 # soft: do not fail package on test failures
